@@ -1,6 +1,6 @@
 name: CI/CD
 
-on:
+on:tyuk
   push:
     branches: [main, develop]
   pull_request:
