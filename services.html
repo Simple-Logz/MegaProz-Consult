@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services — MegaProz Consult</title>
+<meta name="description" content="Geological survey, borehole drilling, industrial cleaning, waste management and biodigester soak-away services from MegaProz Consult." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <filter id="grainFilter" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.06 0"/>
+  </filter>
+</svg>
+
+<header class="nav">
+  <div class="navrow">
+    <a href="index.html" class="logo">MegaProz Consult</a>
+    <ul class="navlinks">
+      <li><a href="index.html" class="navtop">Home</a></li>
+      <li class="has-dropdown">
+        <a href="services.html" class="navtop">Services <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        <div class="dropdown grid2">
+          <a href="services.html#geological-survey">Geological Survey</a>
+          <a href="services.html#borehole-drilling">Borehole Drilling</a>
+          <a href="services.html#industrial-cleaning">Industrial Cleaning Services</a>
+          <a href="services.html#waste-management">Waste Management Services</a>
+          <a href="services.html#biodigester-soak-away">Biodigester Soak-Away</a>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a href="process.html" class="navtop">Process <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        <div class="dropdown grid2">
+          <a href="process.html#site-assessment">Site Assessment</a>
+          <a href="process.html#testing-investigation">Testing &amp; Investigation</a>
+          <a href="process.html#execution">Execution</a>
+          <a href="process.html#report">Report</a>
+          <a href="process.html#handover">Handover</a>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a href="projects.html" class="navtop">Projects <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        <div class="dropdown grid2">
+          <a href="projects.html#geological-survey">Geological Survey</a>
+          <a href="projects.html#borehole-drilling">Borehole Drilling</a>
+          <a href="projects.html#industrial-cleaning">Industrial Cleaning Services</a>
+          <a href="projects.html#waste-management">Waste Management Services</a>
+          <a href="projects.html#biodigester-soak-away">Biodigester Soak-Away</a>
+        </div>
+      </li>
+      <li><a href="about.html" class="navtop">About</a></li>
+      <li><a href="index.html#contact" class="navtop">Contact</a></li>
+    </ul>
+    <button class="navburger" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <nav class="mobilenav">
+    <a href="index.html">Home</a>
+    <details open>
+      <summary>Services</summary>
+      <div class="sub">
+        <a href="services.html#geological-survey">Geological Survey</a>
+        <a href="services.html#borehole-drilling">Borehole Drilling</a>
+        <a href="services.html#industrial-cleaning">Industrial Cleaning Services</a>
+        <a href="services.html#waste-management">Waste Management Services</a>
+        <a href="services.html#biodigester-soak-away">Biodigester Soak-Away</a>
+      </div>
+    </details>
+    <details>
+      <summary>Process</summary>
+      <div class="sub">
+        <a href="process.html#site-assessment">Site Assessment</a>
+        <a href="process.html#testing-investigation">Testing &amp; Investigation</a>
+        <a href="process.html#execution">Execution</a>
+        <a href="process.html#report">Report</a>
+        <a href="process.html#handover">Handover</a>
+      </div>
+    </details>
+    <details>
+      <summary>Projects</summary>
+      <div class="sub">
+        <a href="projects.html#geological-survey">Geological Survey</a>
+        <a href="projects.html#borehole-drilling">Borehole Drilling</a>
+        <a href="projects.html#industrial-cleaning">Industrial Cleaning Services</a>
+        <a href="projects.html#waste-management">Waste Management Services</a>
+        <a href="projects.html#biodigester-soak-away">Biodigester Soak-Away</a>
+      </div>
+    </details>
+    <a href="about.html">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="page-hero tall">
+  <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1563883830555-79971475cc22?auto=format&fit=crop&w=2400&q=80')"></div>
+  <div class="grain" style="filter:url(#grainFilter)"></div>
+  <div class="scrim"></div>
+  <div class="page-hero-inner">
+    <div class="crumb"><a href="index.html">Home</a> / Services</div>
+    <h1>What We Do.</h1>
+    <p>Five services, one accountable team — from the first site survey to the last drop collected.</p>
+  </div>
+</section>
+
+<!-- 01 — Geological Survey -->
+<section class="detail-section" id="geological-survey">
+  <div class="detail-grid">
+    <div class="detail-text">
+      <span class="num">— 01</span>
+      <h2>Geological Survey</h2>
+      <p>Before any drilling or construction begins, we carry out geological survey and site reconnaissance to understand what's beneath a piece of land — rock type, soil layers, groundwater indicators and terrain features that shape everything that follows. This is desk study and fieldwork combined, not a guess based on the neighbouring plot.</p>
+      <p>Our geologists map subsurface conditions using established survey methods suited to Nigeria's varied terrain, from coastal sediments to basement-complex geology further inland. The result is a clear picture of what your site can support, before you commit capital to drilling or building on it.</p>
+    </div>
+    <div class="detail-photo">
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1562237548-df51eb90dc2e?auto=format&fit=crop&w=1000&q=70')"></div>
+      <div class="grain" style="filter:url(#grainFilter)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — Borehole Drilling -->
+<section class="detail-section" id="borehole-drilling">
+  <div class="detail-grid reverse">
+    <div class="detail-text">
+      <span class="num">— 02</span>
+      <h2>Borehole Drilling</h2>
+      <p>Reliable water starts underground. We handle the full scope of borehole drilling — siting, drilling, casing, screening and pump installation — for boreholes serving homes, estates, schools, factories and farms, sized to the yield a site can actually sustain.</p>
+      <p>Every borehole is drilled with attention to aquifer depth, water quality and long-term yield, so you're not paying to redrill in a few years. You get a handover report showing what's under your land, what was installed, and how to maintain it.</p>
+    </div>
+    <div class="detail-photo">
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1697045314415-3f8d95f1a6aa?auto=format&fit=crop&w=1000&q=70')"></div>
+      <div class="grain" style="filter:url(#grainFilter)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 — Industrial Cleaning Services -->
+<section class="detail-section" id="industrial-cleaning">
+  <div class="detail-grid">
+    <div class="detail-text">
+      <span class="num">— 03</span>
+      <h2>Industrial Cleaning Services</h2>
+      <p>Tank cleaning, facility sanitation and industrial site maintenance carried out to safety and compliance standards — for storage facilities, processing plants and commercial sites that can't afford downtime or shortcuts.</p>
+      <p>Our crews are trained in confined-space entry, chemical handling and industrial safety protocol, working to a documented process with proper PPE and equipment — not ad-hoc labor. Every job closes out with a completion report for your compliance records.</p>
+    </div>
+    <div class="detail-photo">
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1630509493808-a2de856ccefa?auto=format&fit=crop&w=1000&q=70')"></div>
+      <div class="grain" style="filter:url(#grainFilter)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — Waste Management Services -->
+<section class="detail-section" id="waste-management">
+  <div class="detail-grid reverse">
+    <div class="detail-text">
+      <span class="num">— 04</span>
+      <h2>Waste Management Services</h2>
+      <p>Collection, handling and disposal of solid and liquid waste for residential, commercial and industrial clients — managed to reduce risk to people, property and the surrounding environment, not just moved out of sight.</p>
+      <p>We work to documented waste-handling procedures and current environmental standards, with scheduled collection for ongoing clients and call-out service when a site needs a one-off clearance.</p>
+    </div>
+    <div class="detail-photo">
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1562722902-d33533894eea?auto=format&fit=crop&w=1000&q=70')"></div>
+      <div class="grain" style="filter:url(#grainFilter)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 — Biodigester Soak-Away -->
+<section class="detail-section" id="biodigester-soak-away">
+  <div class="detail-grid">
+    <div class="detail-text">
+      <span class="num">— 05</span>
+      <h2>Biodigester Soak-Away</h2>
+      <p>Vacuum-tanker emptying and maintenance for septic tanks and biodigesters — scheduled service for households and facilities, or emergency call-out when a system is at capacity.</p>
+      <p>Our crews handle extraction and safe off-site disposal in line with environmental and public-health standards, with attention to access, odour control and site cleanup so the job doesn't disrupt your property any more than it has to.</p>
+    </div>
+    <div class="detail-photo">
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1764866180481-655426befcf4?auto=format&fit=crop&w=1000&q=70')"></div>
+      <div class="grain" style="filter:url(#grainFilter)"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="eyebrow">Ready When You Are</div>
+  <h2>Tell us what you're building — we'll tell you what your ground can take.</h2>
+  <a href="index.html#contact" class="btn btn-light">Request A Site Visit</a>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <a href="index.html" class="logo">MegaProz Consult</a>
+      <p>Geological survey, borehole drilling, industrial cleaning, waste management and biodigester soak-away services across Nigeria.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="process.html">Our Process</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="tel:+2348037412943">+234 803 741 2943</a>
+      <a href="#">73 Essien Town, Calabar, CRS, Nigeria</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span id="year"></span> MegaProz Consult. All rights reserved.</span>
+    <span>Site built for MegaProz Consult</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

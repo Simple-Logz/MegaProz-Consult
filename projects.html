@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects — MegaProz Consult</title>
+<meta name="description" content="A portfolio of MegaProz Consult project work across geological survey, borehole drilling, industrial cleaning, waste management and biodigester soak-away." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <filter id="grainFilter" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.06 0"/>
+  </filter>
+</svg>
+
+<header class="nav">
+  <div class="navrow">
+    <a href="index.html" class="logo">MegaProz Consult</a>
+    <ul class="navlinks">
+      <li><a href="index.html" class="navtop">Home</a></li>
+      <li class="has-dropdown">
+        <a href="services.html" class="navtop">Services <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        <div class="dropdown grid2">
+          <a href="services.html#geological-survey">Geological Survey</a>
+          <a href="services.html#borehole-drilling">Borehole Drilling</a>
+          <a href="services.html#industrial-cleaning">Industrial Cleaning Services</a>
+          <a href="services.html#waste-management">Waste Management Services</a>
+          <a href="services.html#biodigester-soak-away">Biodigester Soak-Away</a>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a href="process.html" class="navtop">Process <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        <div class="dropdown grid2">
+          <a href="process.html#site-assessment">Site Assessment</a>
+          <a href="process.html#testing-investigation">Testing &amp; Investigation</a>
+          <a href="process.html#execution">Execution</a>
+          <a href="process.html#report">Report</a>
+          <a href="process.html#handover">Handover</a>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a href="projects.html" class="navtop">Projects <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        <div class="dropdown grid2">
+          <a href="projects.html#geological-survey">Geological Survey</a>
+          <a href="projects.html#borehole-drilling">Borehole Drilling</a>
+          <a href="projects.html#industrial-cleaning">Industrial Cleaning Services</a>
+          <a href="projects.html#waste-management">Waste Management Services</a>
+          <a href="projects.html#biodigester-soak-away">Biodigester Soak-Away</a>
+        </div>
+      </li>
+      <li><a href="about.html" class="navtop">About</a></li>
+      <li><a href="index.html#contact" class="navtop">Contact</a></li>
+    </ul>
+    <button class="navburger" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <nav class="mobilenav">
+    <a href="index.html">Home</a>
+    <details>
+      <summary>Services</summary>
+      <div class="sub">
+        <a href="services.html#geological-survey">Geological Survey</a>
+        <a href="services.html#borehole-drilling">Borehole Drilling</a>
+        <a href="services.html#industrial-cleaning">Industrial Cleaning Services</a>
+        <a href="services.html#waste-management">Waste Management Services</a>
+        <a href="services.html#biodigester-soak-away">Biodigester Soak-Away</a>
+      </div>
+    </details>
+    <details>
+      <summary>Process</summary>
+      <div class="sub">
+        <a href="process.html#site-assessment">Site Assessment</a>
+        <a href="process.html#testing-investigation">Testing &amp; Investigation</a>
+        <a href="process.html#execution">Execution</a>
+        <a href="process.html#report">Report</a>
+        <a href="process.html#handover">Handover</a>
+      </div>
+    </details>
+    <details open>
+      <summary>Projects</summary>
+      <div class="sub">
+        <a href="projects.html#geological-survey">Geological Survey</a>
+        <a href="projects.html#borehole-drilling">Borehole Drilling</a>
+        <a href="projects.html#industrial-cleaning">Industrial Cleaning Services</a>
+        <a href="projects.html#waste-management">Waste Management Services</a>
+        <a href="projects.html#biodigester-soak-away">Biodigester Soak-Away</a>
+      </div>
+    </details>
+    <a href="about.html">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="page-hero tall">
+  <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1651503773847-3b93d760fdde?auto=format&fit=crop&w=2400&q=80')"></div>
+  <div class="grain" style="filter:url(#grainFilter)"></div>
+  <div class="scrim"></div>
+  <div class="page-hero-inner">
+    <div class="crumb"><a href="index.html">Home</a> / Projects</div>
+    <h1>Our Work.</h1>
+    <p>A portfolio of completed project work, grouped by category — proof of what we do, not just a description of it.</p>
+  </div>
+</section>
+
+<section class="projects" style="padding-top:90px">
+  <div class="section-head">
+    <div class="eyebrow">Portfolio</div>
+    <h2>Projects, By Category.</h2>
+    <p>Note the difference from the Services page: Services describes what we offer and how we do it. This page shows the actual project work behind those services. Filter by category below.</p>
+  </div>
+
+  <div class="proj-filter">
+    <button class="active" data-filter="all">All Projects</button>
+    <button data-filter="geological-survey">Geological Survey</button>
+    <button data-filter="borehole-drilling">Borehole Drilling</button>
+    <button data-filter="industrial-cleaning">Industrial Cleaning Services</button>
+    <button data-filter="waste-management">Waste Management Services</button>
+    <button data-filter="biodigester-soak-away">Biodigester Soak-Away</button>
+  </div>
+
+  <div class="proj-grid">
+    <div id="geological-survey" data-category="geological-survey">
+      <div class="proj-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1577335029365-35029f68d093?auto=format&fit=crop&w=700&q=70')"></div><div class="grain" style="filter:url(#grainFilter)"></div></div>
+      <div class="proj-cap"><span class="proj-tag">Geological Survey</span><b>Pre-Development Geological Survey</b> — Residential Estate, Calabar</div>
+    </div>
+    <div data-category="geological-survey">
+      <div class="proj-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=700&q=70')"></div><div class="grain" style="filter:url(#grainFilter)"></div></div>
+      <div class="proj-cap"><span class="proj-tag">Geological Survey</span><b>Subsurface Mapping &amp; Site Reconnaissance</b> — Commercial Development</div>
+    </div>
+
+    <div id="borehole-drilling" data-category="borehole-drilling">
+      <div class="proj-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1562237553-fd52cb2067b6?auto=format&fit=crop&w=700&q=70')"></div><div class="grain" style="filter:url(#grainFilter)"></div></div>
+      <div class="proj-cap"><span class="proj-tag">Borehole Drilling</span><b>Community Water Access</b> — Residential Estate, Calabar</div>
+    </div>
+    <div data-category="borehole-drilling">
+      <div class="proj-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1560701517-c4f1ae856cba?auto=format&fit=crop&w=700&q=70')"></div><div class="grain" style="filter:url(#grainFilter)"></div></div>
+      <div class="proj-cap"><span class="proj-tag">Borehole Drilling</span><b>Institutional Borehole &amp; Pump Install</b> — School Campus</div>
+    </div>
+
+    <div id="industrial-cleaning" data-category="industrial-cleaning">
+      <div class="proj-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1630509493808-a2de856ccefa?auto=format&fit=crop&w=700&q=70')"></div><div class="grain" style="filter:url(#grainFilter)"></div></div>
+      <div class="proj-cap"><span class="proj-tag">Industrial Cleaning Services</span><b>Storage Tank Cleaning</b> — Manufacturing Plant</div>
+    </div>
+    <div data-category="industrial-cleaning">
+      <div class="proj-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1688737265095-faab9ed60072?auto=format&fit=crop&w=700&q=70')"></div><div class="grain" style="filter:url(#grainFilter)"></div></div>
+      <div class="proj-cap"><span class="proj-tag">Industrial Cleaning Services</span><b>Facility Sanitation Programme</b> — Processing Plant</div>
+    </div>
+
+    <div id="waste-management" data-category="waste-management">
+      <div class="proj-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1562722902-d33533894eea?auto=format&fit=crop&w=700&q=70')"></div><div class="grain" style="filter:url(#grainFilter)"></div></div>
+      <div class="proj-cap"><span class="proj-tag">Waste Management Services</span><b>Scheduled Waste Collection</b> — Commercial Site</div>
+    </div>
+    <div data-category="waste-management">
+      <div class="proj-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1602497485099-e41a116a272c?auto=format&fit=crop&w=700&q=70')"></div><div class="grain" style="filter:url(#grainFilter)"></div></div>
+      <div class="proj-cap"><span class="proj-tag">Waste Management Services</span><b>Industrial Waste Clearance</b> — Manufacturing Facility</div>
+    </div>
+
+    <div id="biodigester-soak-away" data-category="biodigester-soak-away">
+      <div class="proj-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1764866180481-655426befcf4?auto=format&fit=crop&w=700&q=70')"></div><div class="grain" style="filter:url(#grainFilter)"></div></div>
+      <div class="proj-cap"><span class="proj-tag">Biodigester Soak-Away</span><b>Biodigester Emptying &amp; Maintenance</b> — Residential Estate</div>
+    </div>
+    <div data-category="biodigester-soak-away">
+      <div class="proj-card"><div class="img" style="background-image:url('https://images.unsplash.com/photo-1562237548-3c36707230ce?auto=format&fit=crop&w=700&q=70')"></div><div class="grain" style="filter:url(#grainFilter)"></div></div>
+      <div class="proj-cap"><span class="proj-tag">Biodigester Soak-Away</span><b>Emergency Septic Soak-Away</b> — Commercial Facility</div>
+    </div>
+  </div>
+
+  <!-- Honest note: replace project names, locations and photos with real
+       case studies and your own site photography before this goes live.
+       These are illustrative placeholders showing how the category
+       filtering and layout work. -->
+  <p style="max-width:var(--maxw);margin:50px auto 0;font-size:12px;color:var(--ink-soft)">Project names, locations and photos above are placeholders illustrating the layout — swap in real case studies and your own site photography before launch.</p>
+</section>
+
+<section class="cta-strip">
+  <div class="eyebrow">Start A Project</div>
+  <h2>Your project could be the next one on this page.</h2>
+  <a href="index.html#contact" class="btn btn-light">Get A Free Quote</a>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <a href="index.html" class="logo">MegaProz Consult</a>
+      <p>Geological survey, borehole drilling, industrial cleaning, waste management and biodigester soak-away services across Nigeria.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="process.html">Our Process</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="tel:+2348037412943">+234 803 741 2943</a>
+      <a href="#">73 Essien Town, Calabar, CRS, Nigeria</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span id="year"></span> MegaProz Consult. All rights reserved.</span>
+    <span>Site built for MegaProz Consult</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
