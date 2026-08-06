@@ -95,7 +95,7 @@ header.nav{
   box-shadow:0 20px 44px rgba(20,16,8,.16);
   padding:8px;display:none;
 }
-.dropdown.grid2{width:420px;display:none;grid-template-columns:1fr 1fr;gap:0;}
+.dropdown.grid2{width:420px;display:none;grid-template-columns:1fr 1fr;gap:0;left:0;transform:none;}
 .dropdown.grid2 a:last-child:nth-child(odd){grid-column:1/-1;}
 .navlinks > li.open .dropdown,
 .navlinks > li.has-dropdown:hover .dropdown,
