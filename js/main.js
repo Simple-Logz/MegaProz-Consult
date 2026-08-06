@@ -1,4 +1,4 @@
-// MegaProz Consult — shared nav behaviour for every page.
+﻿// MegaProz Consult — shared nav behaviour for every page.
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
 
@@ -29,6 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobilenav = document.querySelector('.mobilenav');
   if (burger && mobilenav) {
     burger.addEventListener('click', () => mobilenav.classList.toggle('open'));
+    document.addEventListener('click', (e) => {
+      if (mobilenav.classList.contains('open') && !mobilenav.contains(e.target) && !burger.contains(e.target)) {
+        mobilenav.classList.remove('open');
+      }
+    });
   }
 
   // Projects page category filter (only present on projects.html).
