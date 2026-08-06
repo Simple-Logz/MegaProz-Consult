@@ -202,7 +202,7 @@ header.nav{
 
 /* ── explore cards (home only) — entry points, not full content ─── */
 .explore{padding:44px 32px;background:var(--cream);}
-.explore-grid{max-width:var(--maxw);margin:28px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.explore-grid{max-width:var(--maxw);margin:28px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
 .explore-card{position:relative;overflow:hidden;border-radius:var(--radius);aspect-ratio:3/4;display:flex;align-items:flex-end;background:linear-gradient(160deg,#4a3a24,#1c1710);box-shadow:0 8px 18px rgba(20,16,8,.1);transition:box-shadow .35s ease,transform .35s cubic-bezier(.2,.8,.2,1);}
 .explore-card .img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .45s ease;}
 .explore-card:hover{box-shadow:0 28px 58px rgba(20,16,8,.3);transform:translateY(-6px);}
