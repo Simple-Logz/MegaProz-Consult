@@ -107,10 +107,11 @@ header.nav{
 }
 .dropdown a:hover{background:var(--paper);padding-left:16px;}
 
-.navburger{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+.navburger{display:none;background:none;border:none;cursor:pointer;padding:6px;color:#000;}
 @media(max-width:900px){
   .navlinks{display:none;}
   .navburger{display:block;}
+  .navburger svg{width:26px;height:26px;}
 }
 
 /* mobile nav (built by js/main.js) */
@@ -315,7 +316,8 @@ header.nav{
 .values-head{max-width:var(--maxw);margin:0 auto 26px;text-align:center;}
 .values-head h2{font-size:clamp(30px,3.6vw,42px);max-width:600px;margin:0 auto;}
 .values-head p{font-size:14.5px;color:var(--ink-soft);margin:14px auto 0;max-width:520px;}
-.values-grid{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.values-grid{max-width:var(--maxw);margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:16px;}
+.value-item{flex:0 1 calc((100% - 32px) / 3);}
 .value-item{background:var(--paper);border-radius:var(--radius);padding:34px 28px;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease;}
 .value-item:hover{transform:translateY(-7px);box-shadow:0 24px 44px rgba(15,13,9,.14);}
 .value-item .vicon{width:54px;height:54px;border-radius:50%;background:var(--accent);box-shadow:0 8px 18px rgba(20,16,8,.16);display:flex;align-items:center;justify-content:center;margin-bottom:24px;}
@@ -323,8 +325,8 @@ header.nav{
 .value-item .vn{font-family:'Oswald',sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--accent);display:block;margin-bottom:10px;}
 .value-item h3{font-size:21px;font-weight:600;margin-bottom:12px;}
 .value-item p{font-size:13.5px;color:var(--ink-soft);}
-@media(max-width:860px){.values-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:560px){.values-grid{grid-template-columns:1fr;}}
+@media(max-width:860px){.value-item{flex:0 1 calc((100% - 16px) / 2);}}
+@media(max-width:560px){.value-item{flex:0 1 100%;}}
 
 /* ── cta strip ────────────────────────────────────── */
 .cta-strip{background:var(--dark);padding:48px 32px;text-align:center;}
