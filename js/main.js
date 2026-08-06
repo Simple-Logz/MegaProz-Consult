@@ -51,4 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Scroll-reveal: sections marked with class="reveal" ease in as they
+  // enter the viewport instead of appearing instantly on load.
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach((el) => io.observe(el));
+    } else {
+      revealEls.forEach((el) => el.classList.add('in-view'));
+    }
+  }
 });
