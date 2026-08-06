@@ -112,14 +112,14 @@ header.nav{
 @media(max-width:900px){
   .navlinks{display:none;}
   .navburger{display:block;}
-  .navburger svg{width:26px;height:26px;}
+  .navburger svg{width:36px;height:36px;}
 }
 
 /* mobile nav (built by js/main.js) */
 .mobilenav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);padding:10px 24px 22px;}
 .mobilenav.open{display:block;}
 .mobilenav details{border-bottom:1px solid var(--line);}
-.mobilenav summary{padding:14px 4px;font-size:14px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.mobilenav summary{padding:18px 4px;font-size:20px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
 .mobilenav summary::-webkit-details-marker{display:none;}
 .mobilenav summary::after{
   content:'';flex-shrink:0;width:8px;height:8px;margin-left:10px;
@@ -127,8 +127,8 @@ header.nav{
   transform:rotate(45deg);transition:transform .2s ease;
 }
 .mobilenav details[open] summary::after{transform:rotate(-135deg);}
-.mobilenav a{display:block;padding:14px 4px;font-size:14px;}
-.mobilenav .sub a{padding:9px 4px 9px 14px;font-size:13px;color:var(--ink-soft);}
+.mobilenav a{display:block;padding:18px 4px;font-size:20px;}
+.mobilenav .sub a{padding:12px 4px 12px 14px;font-size:17px;color:var(--ink-soft);}
 
 /* ── generic page hero (subpages) ─────────────────── */
 .page-hero{
@@ -161,17 +161,18 @@ header.nav{
 .hero-ctas .btn-fill{background:var(--accent-light);color:var(--dark);border-color:var(--accent-light);}
 .hero-ctas .btn-fill:hover{background:#fff;border-color:#fff;color:var(--dark);}
 .ng-flag{position:absolute;top:26px;right:32px;z-index:3;width:38px;height:26px;border-radius:5px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.55);}
-.ng-flag svg{width:100%;height:100%;display:block;transform-origin:left center;animation:flagWave 3.2s ease-in-out infinite;}
+.ng-flag svg{width:100%;height:100%;display:block;transform-origin:left center;animation:flagWave 2.4s ease-in-out infinite;}
 @keyframes flagWave{
-  0%,100%{transform:skewY(0deg) scaleY(1);}
-  25%{transform:skewY(-1.6deg) scaleY(.985);}
-  50%{transform:skewY(0deg) scaleY(1);}
-  75%{transform:skewY(1.6deg) scaleY(.985);}
+  0%{transform:skewY(0deg) scaleY(1) scaleX(1);}
+  25%{transform:skewY(-7deg) scaleY(.93) scaleX(.97);}
+  50%{transform:skewY(0deg) scaleY(1) scaleX(1);}
+  75%{transform:skewY(7deg) scaleY(.93) scaleX(.97);}
+  100%{transform:skewY(0deg) scaleY(1) scaleX(1);}
 }
 @media(max-width:700px){.ng-flag{top:16px;right:16px;width:30px;height:20px;}}
 @media(max-width:700px){
-  .hero{min-height:78vh;}
-  .hero-photo{background-position:32% 72%;}
+  .hero{min-height:60vh;}
+  .hero-photo{background-position:40% 85%;}
   .hero-scrim{background:linear-gradient(180deg,rgba(15,13,9,0) 0%,rgba(15,13,9,0) 45%,rgba(15,13,9,.55) 78%,rgba(15,13,9,.88) 100%);}
   .hero-inner{padding:0 22px 34px;}
   .hero-copy{max-width:100%;}
