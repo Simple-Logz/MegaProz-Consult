@@ -65,6 +65,12 @@
     <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
     <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.06 0"/>
   </filter>
+  <filter id="flagWave" x="-30%" y="-30%" width="160%" height="160%">
+    <feTurbulence type="fractalNoise" numOctaves="2" seed="3" result="turb">
+      <animate attributeName="baseFrequency" dur="2.6s" values="0.015 0.11;0.03 0.15;0.015 0.11" repeatCount="indefinite"/>
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="turb" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
 </svg>
 
 <!-- ══════════════════ NAV ══════════════════ -->
@@ -263,10 +269,8 @@
     <div>
       <div class="eyebrow">Get In Touch</div>
       <h2>Tell Us About Your Project.</h2>
-      <!-- Form has no backend yet — action="#" is a placeholder.
-           Wire this to a real endpoint (Formspree, EmailJS, or your own
-           server) before this goes live. -->
-      <form class="form-grid" action="#" method="post">
+      <form class="form-grid" action="https://formspree.io/f/xdenoypo" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from megaprozconsult.com" />
         <div>
           <label for="name">Full Name</label>
           <input id="name" name="name" type="text" placeholder="Your name" required />

@@ -161,13 +161,13 @@ header.nav{
 .hero-ctas .btn-fill{background:var(--accent-light);color:var(--dark);border-color:var(--accent-light);}
 .hero-ctas .btn-fill:hover{background:#fff;border-color:#fff;color:var(--dark);}
 .ng-flag{position:absolute;top:26px;right:32px;z-index:3;width:38px;height:26px;border-radius:5px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.55);}
-.ng-flag svg{width:100%;height:100%;display:block;transform-origin:left center;animation:flagWave 2.4s ease-in-out infinite;}
+.ng-flag svg{width:100%;height:100%;display:block;transform-origin:left center;filter:url(#flagWave);animation:flagWave 3s ease-in-out infinite;}
 @keyframes flagWave{
-  0%{transform:skewY(0deg) scaleY(1) scaleX(1);}
-  25%{transform:skewY(-7deg) scaleY(.93) scaleX(.97);}
-  50%{transform:skewY(0deg) scaleY(1) scaleX(1);}
-  75%{transform:skewY(7deg) scaleY(.93) scaleX(.97);}
-  100%{transform:skewY(0deg) scaleY(1) scaleX(1);}
+  0%{transform:skewY(0deg);}
+  25%{transform:skewY(-3deg);}
+  50%{transform:skewY(0deg);}
+  75%{transform:skewY(3deg);}
+  100%{transform:skewY(0deg);}
 }
 @media(max-width:700px){.ng-flag{top:16px;right:16px;width:30px;height:20px;}}
 @media(max-width:700px){
