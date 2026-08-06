@@ -161,11 +161,17 @@ header.nav{
 .hero-ctas .btn-fill{background:var(--accent-light);color:var(--dark);border-color:var(--accent-light);}
 .hero-ctas .btn-fill:hover{background:#fff;border-color:#fff;color:var(--dark);}
 .ng-flag{position:absolute;top:26px;right:32px;z-index:3;width:38px;height:26px;border-radius:5px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.55);}
-.ng-flag svg{width:100%;height:100%;display:block;}
+.ng-flag svg{width:100%;height:100%;display:block;transform-origin:left center;animation:flagWave 3.2s ease-in-out infinite;}
+@keyframes flagWave{
+  0%,100%{transform:skewY(0deg) scaleY(1);}
+  25%{transform:skewY(-1.6deg) scaleY(.985);}
+  50%{transform:skewY(0deg) scaleY(1);}
+  75%{transform:skewY(1.6deg) scaleY(.985);}
+}
 @media(max-width:700px){.ng-flag{top:16px;right:16px;width:30px;height:20px;}}
 @media(max-width:700px){
   .hero{min-height:78vh;}
-  .hero-photo{background-position:32% center;}
+  .hero-photo{background-position:32% 72%;}
   .hero-scrim{background:linear-gradient(180deg,rgba(15,13,9,0) 0%,rgba(15,13,9,0) 45%,rgba(15,13,9,.55) 78%,rgba(15,13,9,.88) 100%);}
   .hero-inner{padding:0 22px 34px;}
   .hero-copy{max-width:100%;}
