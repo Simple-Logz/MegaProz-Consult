@@ -161,14 +161,7 @@ header.nav{
 .hero-ctas .btn-fill{background:var(--accent-light);color:var(--dark);border-color:var(--accent-light);}
 .hero-ctas .btn-fill:hover{background:#fff;border-color:#fff;color:var(--dark);}
 .ng-flag{position:absolute;top:26px;right:32px;z-index:3;width:38px;height:26px;border-radius:5px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.55);}
-.ng-flag svg{width:100%;height:100%;display:block;transform-origin:left center;filter:url(#flagWave);animation:flagWave 3s ease-in-out infinite;}
-@keyframes flagWave{
-  0%{transform:skewY(0deg);}
-  25%{transform:skewY(-3deg);}
-  50%{transform:skewY(0deg);}
-  75%{transform:skewY(3deg);}
-  100%{transform:skewY(0deg);}
-}
+.ng-flag svg{width:100%;height:100%;display:block;}
 @media(max-width:700px){.ng-flag{top:16px;right:16px;width:30px;height:20px;}}
 @media(max-width:700px){
   .hero{min-height:60vh;}

@@ -65,12 +65,6 @@
     <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
     <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.06 0"/>
   </filter>
-  <filter id="flagWave" x="-30%" y="-30%" width="160%" height="160%">
-    <feTurbulence type="fractalNoise" numOctaves="2" seed="3" result="turb">
-      <animate attributeName="baseFrequency" dur="2.6s" values="0.015 0.11;0.03 0.15;0.015 0.11" repeatCount="indefinite"/>
-    </feTurbulence>
-    <feDisplacementMap in="SourceGraphic" in2="turb" scale="4" xChannelSelector="R" yChannelSelector="G"/>
-  </filter>
 </svg>
 
 <!-- ══════════════════ NAV ══════════════════ -->
@@ -311,7 +305,7 @@
       <div class="contact-row"><b>+234 803 741 2943</b><span>Mon – Sat, 8am – 6pm</span></div>
       <div class="contact-row"><b>73 Essien Town, Calabar, CRS, Nigeria</b><span>Serving clients nationwide</span></div>
       <div class="contact-map">
-        <iframe src="https://www.google.com/maps?q=73+Essien+Town,+Calabar,+Cross+River+State,+Nigeria&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="MegaProz Consult location"></iframe>
+        <iframe src="https://www.google.com/maps?q=Essien+Town,+Calabar,+Cross+River+State,+Nigeria&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="MegaProz Consult location"></iframe>
       </div>
     </div>
   </div>
