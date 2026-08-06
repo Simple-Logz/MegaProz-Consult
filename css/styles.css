@@ -159,11 +159,11 @@ header.nav{
 .intro-inner{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center;}
 .intro h2{font-size:clamp(34px,4.2vw,46px);max-width:420px;}
 .feature-list{margin-top:36px;border-top:1px solid var(--line);}
-.feature-row{padding:22px 4px;border-bottom:1px solid var(--line);transition:.2s ease;}
+.feature-row{padding:16px 4px;border-bottom:1px solid var(--line);transition:.2s ease;}
 .feature-row:hover{padding-left:12px;background:var(--paper);}
 .feature-row b{display:block;font-size:15px;font-weight:600;margin-bottom:5px;}
 .feature-row span{font-size:14px;color:var(--ink-soft);}
-.photo-panel{position:relative;overflow:hidden;border-radius:var(--radius);aspect-ratio:4/5;background:linear-gradient(165deg,#5c4527 0%,#2b2013 60%,#15110a 100%);box-shadow:0 28px 60px rgba(20,16,8,.18);}
+.photo-panel{position:relative;overflow:hidden;border-radius:var(--radius);aspect-ratio:16/15;background:linear-gradient(165deg,#5c4527 0%,#2b2013 60%,#15110a 100%);box-shadow:0 28px 60px rgba(20,16,8,.18);}
 .photo-panel .img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s ease;}
 .photo-panel:hover .img{transform:scale(1.04);}
 @media(max-width:900px){.intro-inner{grid-template-columns:1fr;gap:50px;}.intro{padding:80px 24px;}}
