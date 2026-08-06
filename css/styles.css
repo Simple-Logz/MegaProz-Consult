@@ -303,7 +303,7 @@ header.nav{
 .leader-role{display:block;margin:14px 0 18px;padding-left:16px;border-left:3px solid var(--accent);font-family:'Oswald',sans-serif;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);}
 .leader-text h2{font-size:clamp(30px,4vw,42px);}
 .leader-text p{font-size:17px;line-height:1.75;color:var(--ink-soft);margin-bottom:18px;max-width:560px;}
-@media(max-width:860px){.leader-inner{grid-template-columns:1fr;gap:28px;}.leader-photo{order:1;max-width:300px;margin:0 auto;}.leader-text{order:2;text-align:center;}.leader-role{margin-left:auto;margin-right:auto;border-left:none;border-top:2px solid var(--accent);padding-left:0;padding-top:10px;display:inline-block;}.leader-text p{margin-left:auto;margin-right:auto;}}
+@media(max-width:860px){.leader-inner{grid-template-columns:1fr;gap:28px;}.leader-photo{order:1;width:100%;max-width:300px;height:375px;aspect-ratio:auto;margin:0 auto;}.leader-text{order:2;text-align:center;}.leader-role{margin-left:auto;margin-right:auto;border-left:none;border-top:2px solid var(--accent);padding-left:0;padding-top:10px;display:inline-block;}.leader-text p{margin-left:auto;margin-right:auto;}}
 
 .mission{padding:0 32px 40px;background:var(--cream);}
 .mission-inner{max-width:820px;margin:0 auto;border-top:1px solid var(--line);padding-top:34px;text-align:center;}
