@@ -369,8 +369,10 @@ header.nav{
 .contact{padding:48px 32px;background:var(--cream);}
 .contact-inner{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;}
 .contact h2{font-size:clamp(32px,4.2vw,46px);max-width:420px;}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px;transition:opacity .35s ease;}
+.form-grid.is-sending{opacity:.55;pointer-events:none;}
 .form-grid .full{grid-column:1/-1;}
+.form-grid > div:not(.form-status){transition:opacity .45s ease,transform .45s ease;}
 label{display:block;font-size:11px;font-weight:600;color:var(--ink-soft);margin-bottom:8px;letter-spacing:.08em;text-transform:uppercase;}
 input,select,textarea{
   width:100%;font:inherit;font-size:14.5px;padding:12px 2px;
@@ -378,10 +380,17 @@ input,select,textarea{
 }
 input:focus,select:focus,textarea:focus{border-color:var(--accent);padding-left:8px;}
 textarea{resize:vertical;min-height:90px;}
-.form-status{font-size:13.5px;font-weight:600;padding:12px 14px;border-radius:var(--radius-sm);display:none;}
-.form-status:not(:empty){display:block;}
-.form-status.is-success{background:rgba(0,135,81,.1);color:#0a6b40;}
+.form-status{
+  grid-column:1/-1;font-size:15px;font-weight:600;border-radius:var(--radius-sm);
+  opacity:0;max-height:0;overflow:hidden;padding:0 20px;transform:translateY(14px);
+  transition:opacity .7s cubic-bezier(.22,.61,.36,1),max-height .7s cubic-bezier(.22,.61,.36,1),
+             padding .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);
+}
+.form-status.show{opacity:1;max-height:220px;transform:translateY(0);}
+.form-status.is-success{background:rgba(0,135,81,.1);color:#0a6b40;text-align:center;}
+.form-status.is-success.show{padding:28px 22px;}
 .form-status.is-error{background:rgba(200,40,40,.08);color:#a32626;}
+.form-status.is-error.show{padding:16px 18px;}
 .contact-side{padding-top:6px;}
 .contact-side .eyebrow{margin-top:0;}
 .contact-row{padding:20px 0;border-bottom:1px solid var(--line);}

@@ -72,21 +72,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Contact form: submit via fetch instead of a normal browser POST so the
-  // visitor never leaves megaprozconsult.com or sees formspree.io at all.
+  // visitor never leaves megaprozconsult.com or sees formspree.io at all,
+  // and the result eases in smoothly instead of just popping into place.
   const contactForm = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
   if (contactForm) {
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn ? submitBtn.textContent : '';
+    const fields = Array.from(contactForm.querySelectorAll('.form-grid > div:not(.form-status)'));
+
+    const revealStatus = () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => formStatus.classList.add('show'));
+      });
+    };
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalLabel = submitBtn ? submitBtn.textContent : '';
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
       }
+      contactForm.classList.add('is-sending');
       if (formStatus) {
+        formStatus.classList.remove('is-error', 'is-success', 'show');
         formStatus.textContent = '';
-        formStatus.classList.remove('is-error', 'is-success');
       }
 
       fetch(contactForm.action, {
@@ -95,27 +105,37 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: { Accept: 'application/json' },
       })
         .then((response) => {
-          if (response.ok) {
+          if (!response.ok) throw new Error('Submission failed');
+
+          // Ease the form fields out, then ease the confirmation in —
+          // one smooth transition rather than an instant swap.
+          fields.forEach((f) => {
+            f.style.opacity = '0';
+            f.style.transform = 'translateY(-10px)';
+          });
+          setTimeout(() => {
+            fields.forEach((f) => { f.style.display = 'none'; });
             contactForm.reset();
             if (formStatus) {
               formStatus.textContent = "Thank you — your request has been sent. We'll be in touch shortly.";
               formStatus.classList.add('is-success');
+              revealStatus();
             }
-          } else {
-            throw new Error('Submission failed');
-          }
+          }, 450);
         })
         .catch(() => {
           if (formStatus) {
             formStatus.textContent = 'Sorry, something went wrong sending your request. Please call or WhatsApp us directly instead.';
             formStatus.classList.add('is-error');
+            revealStatus();
           }
-        })
-        .finally(() => {
           if (submitBtn) {
             submitBtn.disabled = false;
             submitBtn.textContent = originalLabel;
           }
+        })
+        .finally(() => {
+          contactForm.classList.remove('is-sending');
         });
     });
   }
