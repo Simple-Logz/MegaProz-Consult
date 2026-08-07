@@ -70,4 +70,53 @@ document.addEventListener('DOMContentLoaded', () => {
       revealEls.forEach((el) => el.classList.add('in-view'));
     }
   }
+
+  // Contact form: submit via fetch instead of a normal browser POST so the
+  // visitor never leaves megaprozconsult.com or sees formspree.io at all.
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalLabel = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+      }
+      if (formStatus) {
+        formStatus.textContent = '';
+        formStatus.classList.remove('is-error', 'is-success');
+      }
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' },
+      })
+        .then((response) => {
+          if (response.ok) {
+            contactForm.reset();
+            if (formStatus) {
+              formStatus.textContent = "Thank you — your request has been sent. We'll be in touch shortly.";
+              formStatus.classList.add('is-success');
+            }
+          } else {
+            throw new Error('Submission failed');
+          }
+        })
+        .catch(() => {
+          if (formStatus) {
+            formStatus.textContent = 'Sorry, something went wrong sending your request. Please call or WhatsApp us directly instead.';
+            formStatus.classList.add('is-error');
+          }
+        })
+        .finally(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel;
+          }
+        });
+    });
+  }
 });

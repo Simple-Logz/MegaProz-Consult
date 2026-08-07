@@ -263,7 +263,7 @@
     <div>
       <div class="eyebrow">Get In Touch</div>
       <h2>Tell Us About Your Project.</h2>
-      <form class="form-grid" action="https://formspree.io/f/xdenoypo" method="POST">
+      <form class="form-grid" id="contactForm" action="https://formspree.io/f/xdenoypo" method="POST">
         <input type="hidden" name="_subject" value="New enquiry from megaprozconsult.com" />
         <div>
           <label for="name">Full Name</label>
@@ -296,6 +296,7 @@
         <div class="full">
           <button type="submit" class="btn btn-fill">Send Request</button>
         </div>
+        <div class="full form-status" id="formStatus" role="status" aria-live="polite"></div>
       </form>
     </div>
 
